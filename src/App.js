@@ -11,7 +11,7 @@ function App() {
   const SelectedText = () => {
     return (
       <p style={{ textAlign: "center" }}>
-        <strong>You Selected {selectedCity},</strong>{" "}
+        <strong>You selected {selectedCity},</strong>{" "}
         <span color="grey">
           {selectedState}, {selectedCountry}
         </span>
