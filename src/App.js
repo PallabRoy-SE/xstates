@@ -66,8 +66,8 @@ function App() {
 
   useEffect(() => {
     if (countries.length === 0) fetchCountries();
-    if (selectedCountry) fetchStates(selectedCountry);
-    if (selectedState && selectedCountry)
+    if (selectedCountry && !selectedState) fetchStates(selectedCountry);
+    if (selectedState && selectedCountry && !selectedCity)
       fetchCities(selectedState, selectedCountry);
   }, [selectedCountry, selectedState]);
 
